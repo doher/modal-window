@@ -1,2 +1,2 @@
-# modal-window
-how to - css/js modal
+# modal-box
+how to - css / js modal
