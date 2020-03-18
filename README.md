@@ -1,2 +1,2 @@
 # modal-box
-how to - css / js modal
+how to do modal box using html / css / js
