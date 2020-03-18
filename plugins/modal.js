@@ -53,15 +53,6 @@ function _createModal(options) {
   return modalBox;
 }
 
-/*
-* --------------
-* onClose(): void
-* onOpen(): void
-* beforeClose(): boolean
-* --------------
-* animate.css
-* */
-
 $.modal = (options) => {
   const ANIMATION_SPEED = 200;
   const $modal = _createModal(options);
@@ -85,6 +76,10 @@ $.modal = (options) => {
       setTimeout(() => {
         $modal.classList.remove('hide');
         closing = false;
+
+        if (typeof options.onClose === 'function') {
+          options.onClose();
+        }
       }, ANIMATION_SPEED);
     }
   };
